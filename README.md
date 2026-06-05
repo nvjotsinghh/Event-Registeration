@@ -18,3 +18,12 @@ A RESTful API built with Express, TypeScript, Joi validation, and Firebase Fires
 
 ## Testing
 Run `npm test`
+
+
+## Tech Stack
+- Node.js + Express
+- TypeScript
+- Joi (validation)
+- Firebase Firestore
+- Jest (testing)
+- GitHub Actions (CI/CD)
