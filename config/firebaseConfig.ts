@@ -1,10 +1,15 @@
 import admin from "firebase-admin";
-import serviceAccount from "../serviceAccountKey.json";
 
 if (!admin.apps.length) {
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
-  });
+  try {
+    const serviceAccount = require("../serviceAccountKey.json");
+    admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+    });
+  } catch {
+    // serviceAccountKey.json not available (e.g. in CI/test environment)
+    console.warn("Firebase service account not found, skipping initialization.");
+  }
 }
 
 export const db = admin.firestore();
