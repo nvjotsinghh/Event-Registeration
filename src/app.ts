@@ -11,4 +11,4 @@ app.get("/health", (_req, res) => {
 
 app.use("/api/v1/events", eventRoutes);
 
-export default app;
+export default app;// Event Registration API
