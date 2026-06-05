@@ -4,11 +4,3 @@ jest.mock("../config/firebaseConfig", () => ({
     doc: jest.fn(),
   },
 }));
-
-afterEach(() => {
-  jest.clearAllMocks();
-});
-
-afterAll(() => {
-  jest.resetModules();
-});

@@ -33,7 +33,7 @@ export interface CreateEventDto {
   location: string;
   capacity: number;
   price: number;
-  status?: EventStatus;
+  status: EventStatus;
   category: EventCategory;
   organizerName: string;
   organizerEmail: string;
