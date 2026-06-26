@@ -9,7 +9,8 @@
     "start": "node dist/server.js",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'"
+    "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
+    "generate-docs": "ts-node scripts/generate-swagger.ts"
   },
   "dependencies": {
     "cors": "^2.8.6",
